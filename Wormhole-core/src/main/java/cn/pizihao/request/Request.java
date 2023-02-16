@@ -1,4 +1,4 @@
-package cn.pizihao.model;
+package cn.pizihao.request;
 
 /**
  * 请求
