@@ -1,1 +1,1 @@
-# WormholeRPC
+# Wormhole-RPC
