@@ -5,7 +5,7 @@
 
     <groupId>io.github.pizihao</groupId>
     <artifactId>Wormhole-RPC</artifactId>
-    <version>0.0.1</version>
+    <version>${core-version}</version>
     <packaging>pom</packaging>
     <name>Wormhole-RPC</name>
     <description>RPC</description>
@@ -14,9 +14,11 @@
         <module>Wormhole-core</module>
         <module>Wormhole-server</module>
         <module>Wormhole-client</module>
+        <module>Wormhole-register</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
+        <core-version>0.0.1</core-version>
     </properties>
     <dependencies>
         <dependency>

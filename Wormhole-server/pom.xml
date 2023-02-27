@@ -4,7 +4,7 @@
     <parent>
         <groupId>io.github.pizihao</groupId>
         <artifactId>Wormhole-RPC</artifactId>
-        <version>0.0.1</version>
+        <version>${core-version}</version>
     </parent>
     <artifactId>Wormhole-server</artifactId>
     <name>Wormhole-server</name>
