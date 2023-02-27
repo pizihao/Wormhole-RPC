@@ -6,12 +6,13 @@
     <parent>
         <groupId>io.github.pizihao</groupId>
         <artifactId>Wormhole-RPC</artifactId>
-        <version>${core-version}</version>
+        <version>${Wormhole.version}</version>
     </parent>
 
     <artifactId>Wormhole-register</artifactId>
 
     <properties>
+        <core-version>0.0.1</core-version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,7 +22,7 @@
         <dependency>
             <groupId>io.github.pizihao</groupId>
             <artifactId>Wormhole-core</artifactId>
-            <version>${core-version}</version>
+            <version>${Wormhole.version}</version>
         </dependency>
     </dependencies>
 
