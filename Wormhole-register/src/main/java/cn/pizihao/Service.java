@@ -1,4 +1,4 @@
-package io.github.pizihao;
+package cn.pizihao;
 
 import java.net.InetAddress;
 
