@@ -20,7 +20,11 @@
     <properties>
         <java.version>1.8</java.version>
         <Wormhole.version>0.0.1</Wormhole.version>
+        <slf4j-api.version>1.7.7</slf4j-api.version>
+        <lombok.version>1.18.26</lombok.version>
+        <netty.version>5.0.0.Alpha2</netty.version>
     </properties>
+    <!-- 必须要有的依赖项 -->
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -32,9 +36,18 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>5.0.0.Alpha2</version>
+            <version>${netty.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
