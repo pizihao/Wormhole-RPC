@@ -1,8 +1,8 @@
 package cn.pizihao.wormholenacosadapter.config;
 
-import cn.pizihao.wormholenacosadapter.register.NacosServiceRegister;
+import cn.pizihao.wormholenacosadapter.register.NacosServiceDiscoveryAdapter;
 import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
-import com.alibaba.cloud.nacos.registry.NacosServiceRegistry;
+import com.alibaba.cloud.nacos.discovery.NacosServiceDiscovery;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
@@ -14,9 +14,9 @@ public class NacosRegisterConfig {
 
 
     @Bean
-    @ConditionalOnBean({NacosDiscoveryProperties.class, NacosServiceRegistry.class})
-    public NacosServiceRegister serviceRegister(NacosServiceRegistry nacosServiceRegistry) {
-        return new NacosServiceRegister(nacosServiceRegistry);
+    @ConditionalOnBean({NacosDiscoveryProperties.class, NacosServiceDiscovery.class})
+    public NacosServiceDiscoveryAdapter serviceRegister(NacosServiceDiscovery nacosServiceDiscovery) {
+        return new NacosServiceDiscoveryAdapter(nacosServiceDiscovery);
     }
 
 

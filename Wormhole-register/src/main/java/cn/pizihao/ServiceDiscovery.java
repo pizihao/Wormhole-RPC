@@ -18,7 +18,7 @@ public interface ServiceDiscovery {
      * @return 发现的所有服务集合
      * @see Service
      */
-    Collection<Service> getServiceUrls();
+    Collection<Service> getServiceInstances();
 
     /**
      * 获取执行名称的服务
@@ -27,6 +27,6 @@ public interface ServiceDiscovery {
      * @return 服务实例
      * @see Service
      */
-    Collection<Service> getHostServiceUrls(String host);
+    Collection<Service> getHostServiceInstances(String host);
 
 }
