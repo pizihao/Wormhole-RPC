@@ -6,10 +6,8 @@ import cn.pizihao.ServiceDiscovery;
 import cn.pizihao.wormholenacosadapter.exception.ServiceNotFindException;
 import com.alibaba.cloud.nacos.discovery.NacosServiceDiscovery;
 import com.alibaba.nacos.api.exception.NacosException;
-import org.springframework.cloud.client.ServiceInstance;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -17,7 +15,7 @@ import java.util.stream.Collectors;
  */
 public class NacosServiceDiscoveryAdapter implements ServiceDiscovery {
 
-    private NacosServiceDiscovery nacosServiceDiscovery;
+    private final NacosServiceDiscovery nacosServiceDiscovery;
 
     public NacosServiceDiscoveryAdapter(NacosServiceDiscovery nacosServiceDiscovery) {
         this.nacosServiceDiscovery = nacosServiceDiscovery;
@@ -40,11 +38,12 @@ public class NacosServiceDiscoveryAdapter implements ServiceDiscovery {
     @Override
     public Collection<Service> getHostServiceInstances(String host) {
         try {
-            List<ServiceInstance> instances = nacosServiceDiscovery.getInstances(host);
-
+            return nacosServiceDiscovery.getInstances(host)
+                    .stream()
+                    .map(NacosServiceInstance::new)
+                    .collect(Collectors.toList());
         } catch (NacosException e) {
             throw new ServiceNotFindException(e);
         }
-        return null;
     }
 }

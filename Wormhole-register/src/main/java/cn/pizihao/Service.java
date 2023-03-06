@@ -1,6 +1,7 @@
 package cn.pizihao;
 
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 
 /**
  * 代表当前服务的基本信息以及当前服务和其他服务之间的关联关系
@@ -17,11 +18,11 @@ public interface Service {
     String getServiceName();
 
     /**
-     * 获取服务地址的{@link InetAddress}的表示形式
+     * 获取服务地址的{@link InetSocketAddress}的表示形式
      *
-     * @return InetAddress
+     * @return InetSocketAddress
      */
-    InetAddress getInetAddress();
+    InetSocketAddress getInetAddress();
 
     /**
      * 获取当前服务的ip地址

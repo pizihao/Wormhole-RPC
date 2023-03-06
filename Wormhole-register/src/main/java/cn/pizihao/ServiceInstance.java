@@ -1,6 +1,7 @@
 package cn.pizihao;
 
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 
 public class ServiceInstance implements Service{
 
@@ -10,7 +11,7 @@ public class ServiceInstance implements Service{
     }
 
     @Override
-    public InetAddress getInetAddress() {
+    public InetSocketAddress getInetAddress() {
         return null;
     }
 
