@@ -4,7 +4,6 @@ import cn.pizihao.Service;
 import cn.pizihao.wormholenacosadapter.exception.ServiceNotFindException;
 import org.springframework.cloud.client.ServiceInstance;
 
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.Optional;
 
@@ -19,7 +18,7 @@ public class NacosServiceInstance implements Service {
     @Override
     public String getServiceName() {
         return Optional.ofNullable(serviceInstance.getServiceId())
-                .orElseGet(() -> serviceInstance.getHost());
+                .orElseGet(serviceInstance::getHost);
     }
 
     @Override
