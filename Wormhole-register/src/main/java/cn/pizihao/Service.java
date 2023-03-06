@@ -1,6 +1,5 @@
 package cn.pizihao;
 
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 
 /**
