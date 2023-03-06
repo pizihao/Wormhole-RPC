@@ -9,12 +9,12 @@
         <version>${Wormhole.version}</version>
     </parent>
 
-    <artifactId>Wormhole-register-adapter</artifactId>
+    <artifactId>Wormhole-register-adapter-starter</artifactId>
     <description>用于服务注册中心的适配器</description>
     <version>${Wormhole.version}</version>
     <packaging>pom</packaging>
     <modules>
-        <module>Wormhole-nacos-adapter</module>
+        <module>Wormhole-nacos-adapter-starter</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -37,9 +37,38 @@
                 <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring-boot.version}</version>
+                <optional>true</optional>
+            </dependency>
+            <dependency>
                 <groupId>io.github.pizihao</groupId>
                 <artifactId>Wormhole-register</artifactId>
                 <version>${Wormhole.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <scope>test</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
             </dependency>
         </dependencies>
     </dependencyManagement>

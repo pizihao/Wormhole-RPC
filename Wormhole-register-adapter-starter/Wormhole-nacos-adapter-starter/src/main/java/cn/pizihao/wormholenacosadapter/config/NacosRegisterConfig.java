@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
 @ConditionalOnClass(NacosDiscoveryProperties.class)
 public class NacosRegisterConfig {
 
-
     @Bean
     @ConditionalOnBean({NacosDiscoveryProperties.class, NacosServiceDiscovery.class})
     public NacosServiceDiscoveryAdapter serviceRegister(NacosServiceDiscovery nacosServiceDiscovery) {
