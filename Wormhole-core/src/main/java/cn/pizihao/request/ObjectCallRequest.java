@@ -5,7 +5,6 @@ package cn.pizihao.request;
  */
 public class ObjectCallRequest implements Request {
 
-
     public String getRID() {
         return null;
     }
