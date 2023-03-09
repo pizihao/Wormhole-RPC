@@ -10,6 +10,11 @@
     <name>Wormhole-client</name>
     <dependencies>
         <dependency>
+            <groupId>io.github.pizihao</groupId>
+            <artifactId>Wormhole-core</artifactId>
+            <version>${Wormhole.version}</version>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
