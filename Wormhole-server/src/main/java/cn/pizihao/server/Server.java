@@ -1,4 +1,4 @@
-package cn.pizihao;
+package cn.pizihao.server;
 
 import cn.pizihao.channel.Channel;
 
