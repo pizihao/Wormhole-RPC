@@ -19,9 +19,9 @@ package cn.pizihao.exception;
 
 /**
  * 在解码和编码过程中，如果发生异常，则抛出类型为{@link CoderException}的异常，
- * 它与{@link RuntimeException}没有什么不同，但是异常的类型更明确
+ * 它与{@link WormholeException}没有什么不同，但是异常的类型更明确
  */
-public class CoderException extends RuntimeException {
+public class CoderException extends WormholeException {
 
     private static final long serialVersionUID = 8247610319171014183L;
 
@@ -31,18 +31,6 @@ public class CoderException extends RuntimeException {
 
     public CoderException(String message) {
         super(message);
-    }
-
-    public CoderException(Throwable e) {
-        super(e.getMessage(), e);
-    }
-
-    public CoderException(String message, Throwable throwable) {
-        super(message, throwable);
-    }
-
-    public CoderException(String message, Throwable throwable, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, throwable, enableSuppression, writableStackTrace);
     }
 
 }
