@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
- * 根据ObjectDecoder实现的java对象解码器，必须确保传输的对象可以序列化
+ * 根据{@link io.netty.handler.codec.serialization.ObjectEncoder}实现的java对象解码器，必须确保传输的对象可以序列化
  */
 public class ObjectEncoder extends io.netty.handler.codec.serialization.ObjectEncoder {
 

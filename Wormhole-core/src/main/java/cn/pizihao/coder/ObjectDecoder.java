@@ -6,7 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.serialization.ClassResolver;
 
 /**
- * 根据ObjectDecoder实现的java对象解码器，有必要确保传输的对象可以串行化
+ * 根据{@link io.netty.handler.codec.serialization.ObjectDecoder}实现的java对象解码器，有必要确保传输的对象可以串行化
  */
 public class ObjectDecoder extends io.netty.handler.codec.serialization.ObjectDecoder {
     public ObjectDecoder(ClassResolver classResolver) {
