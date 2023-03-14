@@ -1,5 +1,6 @@
 package cn.pizihao.connect;
 
+import cn.pizihao.channel.Channel;
 import cn.pizihao.channel.ITimeout;
 import cn.pizihao.exception.ConnectException;
 
